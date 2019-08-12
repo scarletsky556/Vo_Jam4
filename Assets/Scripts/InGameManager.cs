@@ -11,6 +11,9 @@ public class InGameManager : MonoBehaviour
         public string[] Character;
     }
     List<DiffcultSetting> difficult = new List<DiffcultSetting>();
+
+    public QuizChoice[] QuizText;
+
     public QuizManager quizManager;
     // Start is called before the first frame update
     void Start()
@@ -47,11 +50,19 @@ public class InGameManager : MonoBehaviour
         var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
         for (int i = 0; i < difficult[diff].Character.Length;i++)
         {
+            QuizText[i].gameObject.SetActive(true);
+            QuizText[i].DataSet(quiz[i].name,i);
             Debug.Log(quiz[i].systemName+"_"+difficult[diff].Character[i]);
         }
         for(int i= difficult[diff].Character.Length;i<quiz.Length;i++)
         {
+            QuizText[i].gameObject.SetActive(true);
+            QuizText[i].DataSet(quiz[i].name,i);
             Debug.Log("Wrong Answer:"+quiz[i].systemName);
+        }
+        for(int i=quiz.Length;i<QuizText.Length;i++)
+        {
+            QuizText[i].gameObject.SetActive(false);
         }
         
     }
