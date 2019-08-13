@@ -556,8 +556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1901760946}
-  m_rectTransform: {fileID: 875290619}
+  Itemtext: {fileID: 1901760946}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &875290621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,8 +659,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1605982360}
-  m_rectTransform: {fileID: 1136832270}
+  Itemtext: {fileID: 1605982360}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &1136832272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,8 +799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 1803824889}
-  m_rectTransform: {fileID: 1203787910}
+  Itemtext: {fileID: 1803824889}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &1203787912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,8 +896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 799770252}
-  m_rectTransform: {fileID: 1365391478}
+  Itemtext: {fileID: 799770252}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &1365391480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,8 +987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 47498777}
-  m_rectTransform: {fileID: 1450577549}
+  Itemtext: {fileID: 47498777}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &1450577551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,8 +1308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62f3c150c9e4ba4f8b7193df9270c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 622785635}
-  m_rectTransform: {fileID: 1825420592}
+  Itemtext: {fileID: 622785635}
+  ChoiceBox: {fileID: 3353597821360558289, guid: 88c266a4976a21f4b9724b2bf0c20fce,
+    type: 3}
 --- !u!114 &1825420594
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,40 +7,65 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Image))]
 
 // ドラッグとドロップに関するインターフェースを実装する
-public class QuizChoice : MonoBehaviour, IDragHandler
+public class QuizChoice : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Transform canvasTran;
-    private GameObject draggingObject;
 
-    public Text text;
+    public Text Itemtext;
     [System.NonSerialized]
     public int id;
 
+    public QuizChoicePrefab ChoiceBox;
 
     public void DataSet(string name,int id)
     {
-        text.text = name;
+        Itemtext.text = name;
         this.id = id;
     }
 
-    // ドラッグ前の位置
-    private Vector2 prevPos;
+    private Transform canvasTran;
+    private QuizChoicePrefab draggingObject;
 
     void Awake()
     {
         canvasTran = transform.parent.parent;
     }
 
-    public RectTransform m_rectTransform = null;
-
-    private void Reset()
+    public void OnBeginDrag(PointerEventData pointerEventData)
     {
-        m_rectTransform = GetComponent<RectTransform>();
+        CreateDragObject();
+        var pos = Camera.main.ScreenToWorldPoint(pointerEventData.position);
+        pos.z = 0;
+        draggingObject.transform.position = pos;
+        
     }
 
-    public void OnDrag(PointerEventData e)
+    public void OnDrag(PointerEventData pointerEventData)
     {
-        m_rectTransform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        m_rectTransform.position = new Vector3(m_rectTransform.position.x, m_rectTransform.position.y, 0);
+        var pos = Camera.main.ScreenToWorldPoint(pointerEventData.position);
+        pos.z = 0;
+        draggingObject.transform.position = pos;
+    }
+
+    public void OnEndDrag(PointerEventData pointerEventData)
+    {
+        gameObject.GetComponent<Image>().color = Vector4.one;
+        Destroy(draggingObject.gameObject);
+    }
+
+    // ドラッグオブジェクト作成
+    private void CreateDragObject()
+    {
+        draggingObject = Instantiate(ChoiceBox);
+        draggingObject.transform.SetParent(canvasTran);
+        draggingObject.transform.SetAsLastSibling();
+        draggingObject.transform.localScale = Vector3.one;
+
+        // レイキャストがブロックされないように
+        CanvasGroup canvasGroup = draggingObject.gameObject.AddComponent<CanvasGroup>();
+        canvasGroup.blocksRaycasts = false;
+
+        draggingObject.Itemtext.text = Itemtext.text;
+
+        gameObject.GetComponent<Image>().color = Vector4.one * 0.6f;
     }
 }
