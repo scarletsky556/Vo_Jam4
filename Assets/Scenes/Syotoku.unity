@@ -748,6 +748,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WordCsv: {fileID: 4900000, guid: 71fb898546bf47d4f969edd3a6fc10c9, type: 3}
+--- !u!95 &1201036503 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6469893240590144310, guid: b147355ede758af40b26d0985955fe32,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772292679166703605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203787909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1033,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450577548}
   m_CullTransparentMesh: 0
+--- !u!82 &1603257024 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1603257024, guid: b147355ede758af40b26d0985955fe32,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772292679166703605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1605982358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1677,16 @@ PrefabInstance:
       propertyPath: label
       value: 
       objectReference: {fileID: 2139759325}
+    - target: {fileID: 980610764524555924, guid: 9cde320ca7dc66c41aaabc20007fbdec,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 1201036503}
+    - target: {fileID: 980610764524555924, guid: 9cde320ca7dc66c41aaabc20007fbdec,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1603257024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cde320ca7dc66c41aaabc20007fbdec, type: 3}
 --- !u!1001 &4000530697446005564
