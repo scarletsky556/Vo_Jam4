@@ -5,29 +5,22 @@ using UnityEngine.EventSystems;
 public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public QuizChoicePrefab ChoicePrefab;
+    private Sprite nowSprite;
 
-    public InGameManager manager;
-
-    public string NowAnswer;
-
-    [HideInInspector]
-    public int Id;
-
-    [HideInInspector]
-    public int AnswerId;
+    string NowAnswer;
 
     public Image BoxImage;
 
-    public void AnswerSet(int id)
+    void Start()
     {
-        ChoicePrefab.gameObject.SetActive(false);
-        AnswerId = id;
+        nowSprite = null;
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         if (pointerEventData.pointerDrag == null) return;
         QuizChoice droppedAnswer = pointerEventData.pointerDrag.GetComponent<QuizChoice>();
+
         //ChoicePrefab.Itemtext.text = droppedAnswer.Itemtext.text;
         BoxImage.color = Color.gray;
     }
@@ -49,12 +42,8 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     public void OnDrop(PointerEventData pointerEventData)
     {
         QuizChoice droppedAnswer = pointerEventData.pointerDrag.GetComponent<QuizChoice>();
-        ChoicePrefab.gameObject.SetActive(true);
         ChoicePrefab.Itemtext.text = droppedAnswer.Itemtext.text;
         NowAnswer = droppedAnswer.Itemtext.text;
         BoxImage.color = Color.white;
-        Id = droppedAnswer.id;
-
-        manager.AnswerCheck();
     }
 }
