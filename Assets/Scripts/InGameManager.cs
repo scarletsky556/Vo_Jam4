@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Playables;
 public class InGameManager : MonoBehaviour
 {
     class DiffcultSetting
@@ -12,6 +13,9 @@ public class InGameManager : MonoBehaviour
         public List<Vector2> AnswerPos;
     }
     List<DiffcultSetting> difficult = new List<DiffcultSetting>();
+
+    public PlayableDirector introTL;
+    public PlayableDirector AnswerTL;
 
     public UnityEngine.UI.Button AnswerButton;
 
@@ -58,28 +62,9 @@ public class InGameManager : MonoBehaviour
 
     public void GameStart(int diff)
     {
-        var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
-        var pos= difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
-        for (int i = 0; i < difficult[diff].Character.Length;i++)
-        {
-            QuizText[i].gameObject.SetActive(true);
-            QuizText[i].DataSet(quiz[i].name,i);
-            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
-            AnswerBox[i].AnswerId = i;
-            Debug.Log(quiz[i].systemName+"_"+difficult[diff].Character[i]);
-        }
-        for(int i= difficult[diff].Character.Length;i<quiz.Length;i++)
-        {
-            QuizText[i].gameObject.SetActive(true);
-            QuizText[i].DataSet(quiz[i].name,i);
-            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
-            Debug.Log("Wrong Answer:"+quiz[i].systemName);
-        }
-        for(int i=quiz.Length;i<QuizText.Length;i++)
-        {
-            QuizText[i].gameObject.SetActive(false);
-        }
-        AnswerButton.gameObject.SetActive(false);
+        StartCoroutine(GameStartCo(diff));
+
+        
     }
     public void AnswerCheck()
     {
@@ -89,6 +74,41 @@ public class InGameManager : MonoBehaviour
                 return;
         }
         AnswerButton.gameObject.SetActive(true);
+    }
+
+    IEnumerator GameStartCo(int diff)
+    {
+        introTL.Play();
+
+        while(introTL.state == PlayState.Playing)
+        {
+            yield return 0;
+        }
+
+        
+
+        var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
+        var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
+        for (int i = 0; i < difficult[diff].Character.Length; i++)
+        {
+            QuizText[i].gameObject.SetActive(true);
+            QuizText[i].DataSet(quiz[i].name, i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
+            AnswerBox[i].AnswerId = i;
+            Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
+        }
+        for (int i = difficult[diff].Character.Length; i < quiz.Length; i++)
+        {
+            QuizText[i].gameObject.SetActive(true);
+            QuizText[i].DataSet(quiz[i].name, i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
+            Debug.Log("Wrong Answer:" + quiz[i].systemName);
+        }
+        for (int i = quiz.Length; i < QuizText.Length; i++)
+        {
+            QuizText[i].gameObject.SetActive(false);
+        }
+        AnswerButton.gameObject.SetActive(false);
     }
 
     public void Answer()
