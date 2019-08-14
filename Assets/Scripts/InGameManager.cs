@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class InGameManager : MonoBehaviour
 {
     class DiffcultSetting
@@ -9,6 +9,7 @@ public class InGameManager : MonoBehaviour
         public int AnswerNum;
         public int WrongNum;
         public string[] Character;
+        public List<Vector2> AnswerPos;
     }
     List<DiffcultSetting> difficult = new List<DiffcultSetting>();
 
@@ -31,15 +32,17 @@ public class InGameManager : MonoBehaviour
         difficult.Add(new DiffcultSetting
         {
             //Easy
-            AnswerNum = 3,
-            WrongNum = 2,
-            Character = new string[] { "yukari", "maki", "aoi", "akane" }
+            AnswerNum = 4,
+            WrongNum = 1,
+            Character = new string[] { "yukari", "maki", "aoi", "akane" },
+            AnswerPos = new List<Vector2>(new Vector2[] {new Vector2(-112,0),new Vector2(-56,0),new Vector2(0,0),new Vector2(56,0),new Vector2(112,0) })
+            
         });
         difficult.Add(new DiffcultSetting
         {
             //Normal
             AnswerNum = 4,
-            WrongNum = 2,
+            WrongNum = 1,
             Character = new string[] {"yukari","maki","aoi","akane"}
         });
         difficult.Add(new DiffcultSetting
@@ -56,10 +59,12 @@ public class InGameManager : MonoBehaviour
     public void GameStart(int diff)
     {
         var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
+        var pos= difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
         for (int i = 0; i < difficult[diff].Character.Length;i++)
         {
             QuizText[i].gameObject.SetActive(true);
             QuizText[i].DataSet(quiz[i].name,i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
             AnswerBox[i].AnswerId = i;
             Debug.Log(quiz[i].systemName+"_"+difficult[diff].Character[i]);
         }
@@ -67,6 +72,7 @@ public class InGameManager : MonoBehaviour
         {
             QuizText[i].gameObject.SetActive(true);
             QuizText[i].DataSet(quiz[i].name,i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
             Debug.Log("Wrong Answer:"+quiz[i].systemName);
         }
         for(int i=quiz.Length;i<QuizText.Length;i++)
