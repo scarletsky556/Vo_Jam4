@@ -12,11 +12,19 @@ public class InGameManager : MonoBehaviour
     }
     List<DiffcultSetting> difficult = new List<DiffcultSetting>();
 
+    public UnityEngine.UI.Button AnswerButton;
+
+    public ResultManager result;
+
+    public GameSceneManager sceneManager;
+
     public QuizChoice[] QuizText;
+
+    public QuizAnswerBox[] AnswerBox;
 
     public QuizManager quizManager;
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         quizManager.Initialized();
         
@@ -25,7 +33,7 @@ public class InGameManager : MonoBehaviour
             //Easy
             AnswerNum = 3,
             WrongNum = 2,
-            Character = new string[]{"yukari","maki","akari"}
+            Character = new string[] { "yukari", "maki", "aoi", "akane" }
         });
         difficult.Add(new DiffcultSetting
         {
@@ -42,7 +50,7 @@ public class InGameManager : MonoBehaviour
             Character = new string[] { "yukari", "maki", "aoi", "akane", "akari", "kiritan" }
         });
 
-        GameStart(0);
+        
     }
 
     public void GameStart(int diff)
@@ -52,6 +60,7 @@ public class InGameManager : MonoBehaviour
         {
             QuizText[i].gameObject.SetActive(true);
             QuizText[i].DataSet(quiz[i].name,i);
+            AnswerBox[i].AnswerId = i;
             Debug.Log(quiz[i].systemName+"_"+difficult[diff].Character[i]);
         }
         for(int i= difficult[diff].Character.Length;i<quiz.Length;i++)
@@ -64,14 +73,29 @@ public class InGameManager : MonoBehaviour
         {
             QuizText[i].gameObject.SetActive(false);
         }
-        
+        AnswerButton.gameObject.SetActive(false);
+    }
+    public void AnswerCheck()
+    {
+        for(int i=0;i<AnswerBox.Length;i++)
+        {
+            if (AnswerBox[i].NowAnswer == "")
+                return;
+        }
+        AnswerButton.gameObject.SetActive(true);
     }
 
-    
-
-    // Update is called once per frame
-    void Update()
+    public void Answer()
     {
-        
+        int c=0,w = 0;
+        for (int i = 0; i < AnswerBox.Length; i++)
+        {
+            if (AnswerBox[i].Id == AnswerBox[i].AnswerId)
+                c++;
+            else
+                w++;
+        }
+        sceneManager.ToResult();
+        result.Result(c, w);
     }
 }
