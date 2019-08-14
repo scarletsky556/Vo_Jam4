@@ -1529,7 +1529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6148546320496700890
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1559,7 +1559,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: e1447560ae94b3c46846849f5b33362f, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -1721,6 +1721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a65bca4434478c40ab6d1e3b152c0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introTL: {fileID: 5676658003639285967}
+  AnswerTL: {fileID: 5812496581156129763}
   AnswerButton: {fileID: 6458049207506870213}
   result: {fileID: 0}
   sceneManager: {fileID: 0}
