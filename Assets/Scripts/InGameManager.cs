@@ -69,9 +69,11 @@ public class InGameManager : MonoBehaviour
     IEnumerator GameStartCo(int diff)
     {
         introTL.Play();
+        yield return 0;
 
         while(introTL.state==PlayState.Playing)
         {
+            
             yield return 0;
         }
 
