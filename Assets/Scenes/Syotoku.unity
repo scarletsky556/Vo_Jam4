@@ -1189,6 +1189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingame
       objectReference: {fileID: 0}
+    - target: {fileID: 5724317131043376696, guid: b22d5e0f2231f524083de475faa4b441,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
         type: 3}
       propertyPath: sceneManager
@@ -1369,6 +1374,11 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 1201036503}
+    - target: {fileID: 7109899461200133727, guid: b22d5e0f2231f524083de475faa4b441,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
 --- !u!1001 &6410343495239369065
@@ -1947,6 +1957,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1875526750688498906, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 1603257024}
+    - target: {fileID: 1875526750688498906, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 2139759325}
+    - target: {fileID: 1875526750688498906, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1201036503}
+    - target: {fileID: 5839677389225746787, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 1603257024}
+    - target: {fileID: 5839677389225746787, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 2139759325}
+    - target: {fileID: 5839677389225746787, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1201036503}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cd81ade604aee94b9f71fb09f143917, type: 3}
 --- !u!114 &9046217264306043632 stripped

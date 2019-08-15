@@ -170,7 +170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9106365432762911380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -220,6 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357158703438645781}
+  - component: {fileID: 1875526750688498906}
   m_Layer: 5
   m_Name: ResultVoice
   m_TagString: Untagged
@@ -246,6 +247,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!320 &1875526750688498906
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3973447869298509778}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 16939f069aa28f749987717ec1e2b1a7, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114249389289180704, guid: 16939f069aa28f749987717ec1e2b1a7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114555341362232486, guid: 16939f069aa28f749987717ec1e2b1a7, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114103589903535906, guid: 16939f069aa28f749987717ec1e2b1a7, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &3979164191852933532
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,13 +433,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140916609928590881}
+  - component: {fileID: 5839677389225746787}
   m_Layer: 5
   m_Name: NextRoundVoice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &140916609928590881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -435,6 +460,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!320 &5839677389225746787
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773304732945235006}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e059699e0ece7294bb53c5aaffc9adee, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114249389289180704, guid: e059699e0ece7294bb53c5aaffc9adee, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114555341362232486, guid: e059699e0ece7294bb53c5aaffc9adee, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114103589903535906, guid: e059699e0ece7294bb53c5aaffc9adee, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &9046217264495368453
 GameObject:
   m_ObjectHideFlags: 0
