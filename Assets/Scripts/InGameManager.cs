@@ -88,6 +88,7 @@ public class InGameManager : MonoBehaviour
             QuizText[i].gameObject.SetActive(false);
         }
         QFukidashi.SetActive(false);
+        yield return 0;
 
         var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
         var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
