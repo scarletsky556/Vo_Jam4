@@ -29,6 +29,12 @@ public class InGameManager : MonoBehaviour
     public QuizAnswerBox[] AnswerBox;
 
     public QuizManager quizManager;
+
+    public Animator[] character;
+
+    public AudioSource[] voiceSource;
+
+    public GameObject QFukidashi;
     // Start is called before the first frame update
     public void Init()
     {
@@ -68,37 +74,70 @@ public class InGameManager : MonoBehaviour
 
     IEnumerator GameStartCo(int diff)
     {
+        //初期化
+        AnswerButton.gameObject.SetActive(false);
+        for (int i = 0; i < AnswerBox.Length; i++)
+        {
+            AnswerBox[i].gameObject.SetActive(false);
+        }
+        for(int i=0;i<QuizText.Length;i++)
+        {
+            QuizText[i].gameObject.SetActive(false);
+        }
+        QFukidashi.SetActive(false);
         introTL.Play();
+        
         yield return 0;
 
+        //イントロ再生
         while(introTL.state==PlayState.Playing)
         {
             
             yield return 0;
         }
 
+
         var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
         var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
         for (int i = 0; i < difficult[diff].Character.Length; i++)
         {
-            QuizText[i].gameObject.SetActive(true);
+            
             QuizText[i].DataSet(quiz[i].name, i);
             QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
             AnswerBox[i].AnswerId = i;
+            voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/"+quiz[i].systemName + "_" + difficult[diff].Character[i]);
             Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
         }
         for (int i = difficult[diff].Character.Length; i < quiz.Length; i++)
         {
-            QuizText[i].gameObject.SetActive(true);
             QuizText[i].DataSet(quiz[i].name, i);
             QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
             Debug.Log("Wrong Answer:" + quiz[i].systemName);
         }
-        for (int i = quiz.Length; i < QuizText.Length; i++)
+
+        float maxClip=0;
+        for(int i=0;i<voiceSource.Length;i++)
         {
-            QuizText[i].gameObject.SetActive(false);
+            var l = voiceSource[i].clip.length;
+            if (maxClip < l)
+                maxClip = l;
+            voiceSource[i].Play();
         }
-        AnswerButton.gameObject.SetActive(false);
+        QFukidashi.SetActive(true);
+        yield return new WaitForSeconds(maxClip+0.5f);
+
+        QFukidashi.SetActive(false);
+
+        for (int i = 0; i < QuizText.Length; i++)
+        {
+            QuizText[i].gameObject.SetActive(true);
+        }
+        for (int i = 0; i < AnswerBox.Length; i++)
+        {
+            AnswerBox[i].gameObject.SetActive(true);
+        }
+
+
     }
 
     public void AnswerCheck()

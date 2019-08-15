@@ -42,6 +42,7 @@ public class QuizManager : MonoBehaviour
         if (quizList == null || quizList.Count == 0)
             return null;
         int q = Random.Range(0, quizList.Count);
+        q = 0;
         var quiz = quizList[q].wordList.OrderBy(i => System.Guid.NewGuid()).Take(AnswerNum + WrongNum).ToArray();
         return quiz;
     }
