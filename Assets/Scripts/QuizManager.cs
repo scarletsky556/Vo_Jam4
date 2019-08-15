@@ -20,6 +20,8 @@ public class QuizManager : MonoBehaviour
             words[i].wordList = new List<Word>();
             for (int x=1,j=0;x<gtxt.Length; x++,j++)
             {
+                if (gtxt[x].Length<=2)
+                    return;
                 words[i].wordList.Add(new Word());
                 words[i].wordList[j].name = gtxt[x];
                 words[i].wordList[j].systemName = gtxt[x + 1];

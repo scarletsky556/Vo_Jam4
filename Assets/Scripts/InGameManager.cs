@@ -85,6 +85,26 @@ public class InGameManager : MonoBehaviour
             QuizText[i].gameObject.SetActive(false);
         }
         QFukidashi.SetActive(false);
+
+        var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
+        var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
+        for (int i = 0; i < difficult[diff].Character.Length; i++)
+        {
+
+            QuizText[i].DataSet(quiz[i].name, i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
+            AnswerBox[i].AnswerId = i;
+            voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/" + quiz[i].systemName + "_" + difficult[diff].Character[i]);
+            Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
+        }
+        for (int i = difficult[diff].Character.Length; i < quiz.Length; i++)
+        {
+            QuizText[i].DataSet(quiz[i].name, i);
+            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
+            Debug.Log("Wrong Answer:" + quiz[i].systemName);
+        }
+
+
         introTL.Play();
         
         yield return 0;
@@ -95,25 +115,7 @@ public class InGameManager : MonoBehaviour
             
             yield return 0;
         }
-
-
-        var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
-        var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
-        for (int i = 0; i < difficult[diff].Character.Length; i++)
-        {
-            
-            QuizText[i].DataSet(quiz[i].name, i);
-            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
-            AnswerBox[i].AnswerId = i;
-            voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/"+quiz[i].systemName + "_" + difficult[diff].Character[i]);
-            Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
-        }
-        for (int i = difficult[diff].Character.Length; i < quiz.Length; i++)
-        {
-            QuizText[i].DataSet(quiz[i].name, i);
-            QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
-            Debug.Log("Wrong Answer:" + quiz[i].systemName);
-        }
+        
 
         float maxClip=0;
         for(int i=0;i<voiceSource.Length;i++)
