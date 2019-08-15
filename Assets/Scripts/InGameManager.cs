@@ -167,6 +167,10 @@ public class InGameManager : MonoBehaviour
 
     public void Answer()
     {
+        for (int i = 0; i < QuizText.Length; i++)
+        {
+            QuizText[i].gameObject.SetActive(false);
+        }
         AnswerButton.gameObject.SetActive(false);
         int c=0,w = 0;
         for (int i = 0; i < AnswerBox.Length; i++)

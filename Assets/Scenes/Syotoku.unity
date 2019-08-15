@@ -257,7 +257,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 7032731777274723367}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224740022}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da583a723d615024ea64c0df30d10848, type: 3}
@@ -316,11 +316,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinalResult
-      objectReference: {fileID: 0}
-    - target: {fileID: 8519017050378943266, guid: f99e1f15f935d854bb0ea69dae0415df,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4526305758840335645, guid: f99e1f15f935d854bb0ea69dae0415df,
         type: 3}
@@ -429,24 +424,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6957918396036171008, guid: f99e1f15f935d854bb0ea69dae0415df,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957918396036171008, guid: f99e1f15f935d854bb0ea69dae0415df,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957918396036171008, guid: f99e1f15f935d854bb0ea69dae0415df,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957918396036171008, guid: f99e1f15f935d854bb0ea69dae0415df,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1224740022}
+      objectReference: {fileID: 534669907}
     - target: {fileID: 7515153411972252236, guid: f99e1f15f935d854bb0ea69dae0415df,
         type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -499,12 +479,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 6469893240590144310, guid: b147355ede758af40b26d0985955fe32,
     type: 3}
   m_PrefabInstance: {fileID: 7772292679166703605}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1224740022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7032731776968676969, guid: 92075c9aff07a654b82c51e0cfab1ee0,
-    type: 3}
-  m_PrefabInstance: {fileID: 7032731777274723367}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &1262615364 stripped
 RectTransform:
