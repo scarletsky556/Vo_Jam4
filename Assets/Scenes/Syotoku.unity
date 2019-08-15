@@ -422,6 +422,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7515153411972252236, guid: f99e1f15f935d854bb0ea69dae0415df,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[0].value
+      value: 
+      objectReference: {fileID: 1201036503}
+    - target: {fileID: 7515153411972252236, guid: f99e1f15f935d854bb0ea69dae0415df,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 2139759325}
+    - target: {fileID: 7515153411972252236, guid: f99e1f15f935d854bb0ea69dae0415df,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[2].value
+      value: 
+      objectReference: {fileID: 1603257024}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99e1f15f935d854bb0ea69dae0415df, type: 3}
 --- !u!224 &968145229 stripped
@@ -1189,11 +1204,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingame
       objectReference: {fileID: 0}
-    - target: {fileID: 5724317131043376696, guid: b22d5e0f2231f524083de475faa4b441,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
         type: 3}
       propertyPath: sceneManager
@@ -1374,11 +1384,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 1201036503}
-    - target: {fileID: 7109899461200133727, guid: b22d5e0f2231f524083de475faa4b441,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
 --- !u!1001 &6410343495239369065
