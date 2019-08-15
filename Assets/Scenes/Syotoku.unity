@@ -139,7 +139,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 763c2e2eba5942440a81b6b519e6a28a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24d7992e3035aa546bec795c3ddd87b8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1225,6 +1225,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingame
       objectReference: {fileID: 0}
+    - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
+        type: 3}
+      propertyPath: result
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
+        type: 3}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 534669907}
     - target: {fileID: 5724317131043376699, guid: b22d5e0f2231f524083de475faa4b441,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1380,16 +1390,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 1201036503}
-    - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
-        type: 3}
-      propertyPath: result
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
-        type: 3}
-      propertyPath: sceneManager
-      value: 
-      objectReference: {fileID: 534669907}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
 --- !u!1001 &6410343495239369065
@@ -1529,6 +1529,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: title
+      value: 
+      objectReference: {fileID: 899027874}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: inGame
+      value: 
+      objectReference: {fileID: 759435097}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: result
+      value: 
+      objectReference: {fileID: 9046217264306043632}
     - target: {fileID: 7032731776968676982, guid: 92075c9aff07a654b82c51e0cfab1ee0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1584,21 +1599,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
-        type: 3}
-      propertyPath: title
-      value: 
-      objectReference: {fileID: 899027874}
-    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
-        type: 3}
-      propertyPath: inGame
-      value: 
-      objectReference: {fileID: 759435097}
-    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
-        type: 3}
-      propertyPath: result
-      value: 
-      objectReference: {fileID: 9046217264306043632}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92075c9aff07a654b82c51e0cfab1ee0, type: 3}
 --- !u!95 &7135228001890694554 stripped
