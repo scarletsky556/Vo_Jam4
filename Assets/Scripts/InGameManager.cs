@@ -116,19 +116,36 @@ public class InGameManager : MonoBehaviour
             yield return 0;
         }
         
-
+        //音声再生
         float maxClip=0;
         for(int i=0;i<voiceSource.Length;i++)
         {
             var l = voiceSource[i].clip.length;
             if (maxClip < l)
                 maxClip = l;
+
+            character[i].SetTrigger("correct");
             voiceSource[i].Play();
         }
         QFukidashi.SetActive(true);
         yield return new WaitForSeconds(maxClip+0.5f);
 
         QFukidashi.SetActive(false);
+        for(int i=0;i<character.Length;i++)
+        {
+            character[i].SetTrigger("idle");
+        }
+
+        //回答モード再生
+        AnswerTL.Play();
+
+        yield return 0;
+
+        while (AnswerTL.state == PlayState.Playing)
+        {
+
+            yield return 0;
+        }
 
         for (int i = 0; i < QuizText.Length; i++)
         {
