@@ -1365,6 +1365,8 @@ MonoBehaviour:
   Id: 0
   AnswerId: 0
   BoxImage: {fileID: 9058595008560312583}
+  Correct: {fileID: 5294168326443891467}
+  Miss: {fileID: 6068564860349706912}
 --- !u!1 &1964066948389891412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1511,8 @@ MonoBehaviour:
   Id: 0
   AnswerId: 0
   BoxImage: {fileID: 6799744524236126371}
+  Correct: {fileID: 8525839499587013022}
+  Miss: {fileID: 4626534301361591975}
 --- !u!222 &8813678896852609999
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1784,6 +1788,8 @@ MonoBehaviour:
   Id: 0
   AnswerId: 0
   BoxImage: {fileID: 3588184850264408954}
+  Correct: {fileID: 6457850689347435321}
+  Miss: {fileID: 1483054410247175471}
 --- !u!1 &4242312840944371310
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3203,8 @@ MonoBehaviour:
   Id: 0
   AnswerId: 0
   BoxImage: {fileID: 6117530380350907247}
+  Correct: {fileID: 6133697328001917641}
+  Miss: {fileID: 9061163421779279335}
 --- !u!1 &8525839499587013022
 GameObject:
   m_ObjectHideFlags: 0

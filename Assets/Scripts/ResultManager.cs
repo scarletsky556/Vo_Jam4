@@ -1,14 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class ResultManager : MonoBehaviour
 {
-    public UnityEngine.UI.Text CorrectText;
-    public UnityEngine.UI.Text WrongText;
-    public void Result(int Correct,int Wrong)
+    public PlayableDirector ResultTL;
+
+    public GameSceneManager sceneManager;
+
+    public void ResulStart()
     {
-        CorrectText.text = Correct + "正解";
-        WrongText.text = Wrong + "不正解";
+        StartCoroutine(ResultCo());
+    }
+
+    IEnumerator ResultCo()
+    {
+        ResultTL.Play();
+
+        yield return 0;
+
+        //イントロ再生
+        while (ResultTL.state == PlayState.Playing)
+        {
+
+            yield return 0;
+        }
+        sceneManager.ToFinalResult();
     }
 }

@@ -457,6 +457,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6410343495239369065}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1195082123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1195082123, guid: f99e1f15f935d854bb0ea69dae0415df,
+    type: 3}
+  m_PrefabInstance: {fileID: 968145228}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0e2922deef81a4cb96a161be70c2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1201036503 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 6469893240590144310, guid: b147355ede758af40b26d0985955fe32,
@@ -1206,6 +1218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
         type: 3}
+      propertyPath: result
+      value: 
+      objectReference: {fileID: 9046217264306043632}
+    - target: {fileID: 5724317132504793883, guid: b22d5e0f2231f524083de475faa4b441,
+        type: 3}
       propertyPath: sceneManager
       value: 
       objectReference: {fileID: 534669907}
@@ -1404,22 +1421,6 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 1201036503}
-    - target: {fileID: 577574213, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 299405082, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1726736829, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 225296223, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22d5e0f2231f524083de475faa4b441, type: 3}
 --- !u!1001 &6410343495239369065
@@ -1574,6 +1575,11 @@ PrefabInstance:
       propertyPath: result
       value: 
       objectReference: {fileID: 9046217264306043632}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: final
+      value: 
+      objectReference: {fileID: 1195082123}
     - target: {fileID: 7032731776968676982, guid: 92075c9aff07a654b82c51e0cfab1ee0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1998,6 +2004,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 408209897306732172, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 534669907}
     - target: {fileID: 1875526750688498906, guid: 7cd81ade604aee94b9f71fb09f143917,
         type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value

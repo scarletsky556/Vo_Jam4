@@ -10,6 +10,8 @@ public class GameSceneManager : MonoBehaviour
 
     public ResultManager result;
 
+    public FinalResultManager final;
+
     public void Start()
     {
         inGame.Init();
@@ -24,7 +26,13 @@ public class GameSceneManager : MonoBehaviour
 
     public void ToResult()
     {
-        inGame.gameObject.SetActive(false);
         result.gameObject.SetActive(true);
+    }
+
+    public void ToFinalResult()
+    {
+        inGame.gameObject.SetActive(false);
+        result.gameObject.SetActive(false);
+        final.gameObject.SetActive(true);
     }
 }

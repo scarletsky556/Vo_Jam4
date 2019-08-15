@@ -18,8 +18,13 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
 
     public Image BoxImage;
 
+    public GameObject Correct;
+    public GameObject Miss;
+
     public void AnswerSet(int id)
     {
+        Correct.SetActive(false);
+        Miss.SetActive(false);
         ChoicePrefab.gameObject.SetActive(false);
         AnswerId = id;
     }
@@ -56,5 +61,13 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
         Id = droppedAnswer.id;
 
         manager.AnswerCheck();
+    }
+
+    public void CoMiSet(bool IsCorrect)
+    {
+        if (IsCorrect)
+            Correct.SetActive(true);
+        else
+            Miss.SetActive(true);
     }
 }

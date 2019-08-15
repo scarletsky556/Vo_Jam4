@@ -119,3 +119,4 @@ MonoBehaviour:
   title: {fileID: 0}
   inGame: {fileID: 0}
   result: {fileID: 0}
+  final: {fileID: 0}

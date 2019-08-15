@@ -175,11 +175,18 @@ public class InGameManager : MonoBehaviour
         for (int i = 0; i < AnswerBox.Length; i++)
         {
             if (AnswerBox[i].Id == AnswerBox[i].AnswerId)
+            {
                 c++;
+                AnswerBox[i].CoMiSet(true);
+            }
             else
+            {
                 w++;
+                AnswerBox[i].CoMiSet(false);
+            }
+               
         }
         sceneManager.ToResult();
-        result.Result(c, w);
+        result.ResulStart();
     }
 }
