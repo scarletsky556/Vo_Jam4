@@ -9,12 +9,12 @@ public class SelectedManager : MonoBehaviour
 
     public GameSceneManager sceneManager;
 
-    public void ResulStart()
+    public void SelectedStart()
     {
-        StartCoroutine(ResultCo());
+        StartCoroutine(SelectedStartCo());
     }
 
-    IEnumerator ResultCo()
+    IEnumerator SelectedStartCo()
     {
         SelectedTL.Play();
 

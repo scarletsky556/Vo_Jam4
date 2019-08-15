@@ -31,6 +31,7 @@ public class GameSceneManager : MonoBehaviour
     {
         DifSelect.SetActive(false);
         selected.gameObject.SetActive(true);
+        selected.SelectedStart();
     }
 
     public void ToInGame()
