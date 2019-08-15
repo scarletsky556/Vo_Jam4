@@ -35,4 +35,10 @@ public class GameSceneManager : MonoBehaviour
         result.gameObject.SetActive(false);
         final.gameObject.SetActive(true);
     }
+
+    public void ToTitle()
+    {
+        final.gameObject.SetActive(false);
+        title.SetActive(true);
+    }
 }

@@ -35,6 +35,9 @@ public class InGameManager : MonoBehaviour
     public AudioSource[] voiceSource;
 
     public GameObject QFukidashi;
+
+    public FinalResultManager FinalResult;
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -139,13 +142,6 @@ public class InGameManager : MonoBehaviour
         //回答モード再生
         AnswerTL.Play();
 
-        yield return 0;
-
-        while (AnswerTL.state == PlayState.Playing)
-        {
-
-            yield return 0;
-        }
 
         for (int i = 0; i < QuizText.Length; i++)
         {
@@ -171,6 +167,7 @@ public class InGameManager : MonoBehaviour
 
     public void Answer()
     {
+        AnswerButton.gameObject.SetActive(false);
         int c=0,w = 0;
         for (int i = 0; i < AnswerBox.Length; i++)
         {
@@ -188,5 +185,6 @@ public class InGameManager : MonoBehaviour
         }
         sceneManager.ToResult();
         result.ResulStart();
+        FinalResult.DataSet(c, w);
     }
 }
