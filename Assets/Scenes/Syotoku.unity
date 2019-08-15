@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &190544076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4000530698364608639, guid: 542738a70915e6f47a1e2c3b19820673,
+    type: 3}
+  m_PrefabInstance: {fileID: 4000530697446005564}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &250771787
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +932,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Difficulty
       objectReference: {fileID: 0}
+    - target: {fileID: 4000530698364608639, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000530698364608632, guid: 542738a70915e6f47a1e2c3b19820673,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1046,6 +1057,36 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 1201036503}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534669907}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660484635205627819, guid: 542738a70915e6f47a1e2c3b19820673,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 542738a70915e6f47a1e2c3b19820673, type: 3}
 --- !u!95 &4153751016144485808 stripped
@@ -1201,6 +1242,11 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[5].value
       value: 
       objectReference: {fileID: 1201036503}
+    - target: {fileID: 893508672416462583, guid: 8f0562460a804584aad1d8d240122a66,
+        type: 3}
+      propertyPath: sceneManager
+      value: 
+      objectReference: {fileID: 534669907}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f0562460a804584aad1d8d240122a66, type: 3}
 --- !u!224 &5584042101000459301 stripped
@@ -1209,6 +1255,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5584042101000459300}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5584042101000459302 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 893508672416462583, guid: 8f0562460a804584aad1d8d240122a66,
+    type: 3}
+  m_PrefabInstance: {fileID: 5584042101000459300}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb0e8115894abf4cb0594077761822b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5724317132504793881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1595,6 +1653,16 @@ PrefabInstance:
       propertyPath: final
       value: 
       objectReference: {fileID: 1195082123}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: DifSelect
+      value: 
+      objectReference: {fileID: 190544076}
+    - target: {fileID: 8284082764163529798, guid: 92075c9aff07a654b82c51e0cfab1ee0,
+        type: 3}
+      propertyPath: selected
+      value: 
+      objectReference: {fileID: 5584042101000459302}
     - target: {fileID: 7032731776968676982, guid: 92075c9aff07a654b82c51e0cfab1ee0,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -6,6 +6,10 @@ public class GameSceneManager : MonoBehaviour
 {
     public GameObject title;
 
+    public GameObject DifSelect;
+
+    public SelectedManager selected;
+
     public InGameManager inGame;
 
     public ResultManager result;
@@ -20,6 +24,18 @@ public class GameSceneManager : MonoBehaviour
     public void ToGame()
     {
         title.SetActive(false);
+        DifSelect.SetActive(true);
+    }
+
+    public void ToSelected()
+    {
+        DifSelect.SetActive(false);
+        selected.gameObject.SetActive(true);
+    }
+
+    public void ToInGame()
+    {
+        selected.gameObject.SetActive(false);
         inGame.gameObject.SetActive(true);
         inGame.GameStart(0);
     }
