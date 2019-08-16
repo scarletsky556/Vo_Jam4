@@ -48,7 +48,6 @@ public class QuizChoice : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData pointerEventData)
     {
-        gameObject.GetComponent<Image>().color = Vector4.one;
         Destroy(draggingObject.gameObject);
     }
 
@@ -65,7 +64,6 @@ public class QuizChoice : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         canvasGroup.blocksRaycasts = false;
 
         draggingObject.Itemtext.text = Itemtext.text;
-
-        gameObject.GetComponent<Image>().color = Vector4.one * 0.6f;
+        
     }
 }

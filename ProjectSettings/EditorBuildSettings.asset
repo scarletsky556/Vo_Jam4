@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Syotoku.unity
+    guid: c4ae13e276d077c439d6657806935cb4
   m_configObjects: {}
