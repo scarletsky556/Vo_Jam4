@@ -97,7 +97,7 @@ public class InGameManager : MonoBehaviour
 
             QuizText[i].DataSet(quiz[i].name, i);
             QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
-            AnswerBox[i].AnswerId = i;
+            AnswerBox[i].AnswerSet(i);
             voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/" + quiz[i].systemName + "_" + difficult[diff].Character[i]);
             Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
         }

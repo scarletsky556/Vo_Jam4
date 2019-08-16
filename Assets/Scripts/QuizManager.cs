@@ -20,8 +20,8 @@ public class QuizManager : MonoBehaviour
             words[i].wordList = new List<Word>();
             for (int x=1,j=0;x<gtxt.Length; x++,j++)
             {
-                if (gtxt[x].Length<=2)
-                    return;
+                if (gtxt[x].Length <= 2)
+                    break;
                 words[i].wordList.Add(new Word());
                 words[i].wordList[j].name = gtxt[x];
                 words[i].wordList[j].systemName = gtxt[x + 1];
@@ -41,10 +41,10 @@ public class QuizManager : MonoBehaviour
         {
             quizList = words.Where(x => x.difficult == Type).ToList();
         }
+        Debug.Log(quizList.Count);
         if (quizList == null || quizList.Count == 0)
             return null;
         int q = Random.Range(0,quizList.Count);
-        q = 0;
         var quiz = quizList[q].wordList.OrderBy(i => System.Guid.NewGuid()).Take(AnswerNum + WrongNum).ToArray();
         return quiz;
     }
