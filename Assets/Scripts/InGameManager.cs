@@ -188,8 +188,11 @@ public class InGameManager : MonoBehaviour
             }
                
         }
+        AnswerTL.Stop();
+        AnswerTL.time = 0;
         sceneManager.ToResult();
         result.ResulStart();
         FinalResult.DataSet(c, w);
     }
+    
 }

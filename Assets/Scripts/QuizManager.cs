@@ -41,7 +41,6 @@ public class QuizManager : MonoBehaviour
         {
             quizList = words.Where(x => x.difficult == Type).ToList();
         }
-        Debug.Log(quizList.Count);
         if (quizList == null || quizList.Count == 0)
             return null;
         int q = Random.Range(0,quizList.Count);
