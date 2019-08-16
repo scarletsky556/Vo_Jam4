@@ -2599,8 +2599,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ToTitle
+      - m_Target: {fileID: 1195082123}
+        m_MethodName: ResultTweet
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2939,3 +2939,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 2521790518768579930}
   Num: {fileID: 6608057538906568237}
+  hashtags: "\u30DC\u30A4\u30ED\u8056\u5FB3\u592A\u5B50"

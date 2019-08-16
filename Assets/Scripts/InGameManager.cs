@@ -70,12 +70,12 @@ public class InGameManager : MonoBehaviour
         
     }
 
-    public void GameStart(int diff)
+    public void GameStart(int round)
     {
-        StartCoroutine(GameStartCo(diff));
+        StartCoroutine(GameStartCo(round));
     }
 
-    IEnumerator GameStartCo(int diff)
+    IEnumerator GameStartCo(int round)
     {
         //初期化
         AnswerButton.gameObject.SetActive(false);
@@ -90,18 +90,18 @@ public class InGameManager : MonoBehaviour
         QFukidashi.SetActive(false);
         yield return 0;
 
-        var quiz = quizManager.QuizCreate(difficult[diff].AnswerNum, difficult[diff].WrongNum);
-        var pos = difficult[diff].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
-        for (int i = 0; i < difficult[diff].Character.Length; i++)
+        var quiz = quizManager.QuizCreate(difficult[0].AnswerNum, difficult[0].WrongNum);
+        var pos = difficult[0].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
+        for (int i = 0; i < difficult[0].Character.Length; i++)
         {
 
             QuizText[i].DataSet(quiz[i].name, i);
             QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
             AnswerBox[i].AnswerSet(i);
-            voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/" + quiz[i].systemName + "_" + difficult[diff].Character[i]);
-            Debug.Log(quiz[i].systemName + "_" + difficult[diff].Character[i]);
+            voiceSource[i].clip = Resources.Load<AudioClip>("Sounds/QuizVoice/" + quiz[i].systemName + "_" + difficult[0].Character[i]);
+            Debug.Log(quiz[i].systemName + "_" + difficult[0].Character[i]);
         }
-        for (int i = difficult[diff].Character.Length; i < quiz.Length; i++)
+        for (int i = difficult[0].Character.Length; i < quiz.Length; i++)
         {
             QuizText[i].DataSet(quiz[i].name, i);
             QuizText[i].transform.localPosition = new Vector3(pos[i].x, pos[i].y, 0);
