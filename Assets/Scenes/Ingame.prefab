@@ -54,11 +54,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: -0.25
+  Pan2D: -0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -186,11 +186,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: -0.5
+  Pan2D: -0.9
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -358,11 +358,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.5
+  Pan2D: 0.9
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -539,11 +539,11 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0.25
+  Pan2D: 0.5
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -2359,7 +2359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5724317131043376699
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2439,6 +2439,7 @@ MonoBehaviour:
   - {fileID: 1726736829}
   - {fileID: 225296223}
   QFukidashi: {fileID: 8829160124118179699}
+  FinalResult: {fileID: 0}
 --- !u!1 &6068564860349706912
 GameObject:
   m_ObjectHideFlags: 0
