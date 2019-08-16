@@ -553,7 +553,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 534669907}
+      objectReference: {fileID: 1195082123}
+    - target: {fileID: 5568310513018864371, guid: f99e1f15f935d854bb0ea69dae0415df,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResultTweet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99e1f15f935d854bb0ea69dae0415df, type: 3}
 --- !u!224 &968145229 stripped
@@ -638,7 +643,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 5}
+  m_AnchoredPosition: {x: 0, y: 4.9999924}
   m_SizeDelta: {x: 320, y: 53}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1488164441
