@@ -144,7 +144,8 @@ AudioSource:
   m_GameObject: {fileID: 250771787}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243521702707374908, guid: 80c969b61efcc0d4eae71feed5bb56bf,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 24d7992e3035aa546bec795c3ddd87b8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -7102,26 +7103,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 718488495, guid: b147355ede758af40b26d0985955fe32, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 530657947, guid: b147355ede758af40b26d0985955fe32, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1046250229, guid: b147355ede758af40b26d0985955fe32, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 40274782, guid: b147355ede758af40b26d0985955fe32, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 614952015, guid: b147355ede758af40b26d0985955fe32, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b147355ede758af40b26d0985955fe32, type: 3}
