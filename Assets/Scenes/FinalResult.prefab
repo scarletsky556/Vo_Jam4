@@ -3193,6 +3193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0e2922deef81a4cb96a161be70c2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: {fileID: 2521790518768579930}
-  Num: {fileID: 6608057538906568237}
+  FullScore: {fileID: 2464439642336185352}
+  Q1: {fileID: 5973058249872799263}
+  Q2: {fileID: 7521441982083790984}
+  Q3: {fileID: 1633267906378573119}
   hashtags: "\u30DC\u30A4\u30ED\u8056\u5FB3\u592A\u5B50"

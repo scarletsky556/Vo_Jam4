@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class FinalResultManager : MonoBehaviour
 {
-    public UnityEngine.UI.Text Score;
-    public UnityEngine.UI.Text Num;
+    public UnityEngine.UI.Text FullScore;
+    public UnityEngine.UI.Text Q1;
+    public UnityEngine.UI.Text Q2;
+    public UnityEngine.UI.Text Q3;
     string plusText;
-    public void DataSet(int c)
+    public void DataSet(int[] c)
     {
-        Num.text = c.ToString();
-        Score.text = (c * 10).ToString();
-        if(c>=10)
+        int sum = 0;
+        Q1.text = c[0].ToString();
+        sum = c[0];
+        Q2.text = c[1].ToString();
+        sum = c[1];
+        Q3.text = c[2].ToString();
+        sum = c[2];
+
+        FullScore.text = (sum * 10).ToString();
+
+        if(sum>=10)
         {
             plusText = "あなたはまさしくボイロ聖徳太子です！";
         }
-        else if(c>=6)
+        else if(sum>=6)
         {
             plusText = "琴葉姉妹が鬼門！";
         }
-        else if(c>=3)
+        else if(sum>=3)
         {
             plusText = "…１人くらいはわかる…？";
         }
@@ -35,7 +45,7 @@ public class FinalResultManager : MonoBehaviour
     public void ResultTweet()
     {
             var url = "https://twitter.com/intent/tweet?"
-                + "text=" + "ボイロ聖徳太子で"+Score.text+"点を取りました！"+plusText
+                + "text=" + "ボイロ聖徳太子で"+ FullScore.text+"点を取りました！"+plusText
                 //+ "&url=" + linkUrl
                 + "&hashtags=" + hashtags;
 

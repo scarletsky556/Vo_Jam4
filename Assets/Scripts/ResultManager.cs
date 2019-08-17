@@ -17,19 +17,22 @@ public class ResultManager : MonoBehaviour
 
     public GameObject RoundObj;
 
-    int correct=0;
+    int[] correct= new int[3];
 
     int round;
 
     public void DataReset()
     {
-        correct = 0;
+        for(int i=0;i<3;i++)
+        {
+            correct[i] = 0;
+        }
         round = 0;
     }
 
     public void ResulStart(int c,int round)
     {
-        correct = c;
+        correct[round-1] = c;
         this.round = round;
         StartCoroutine(ResultCo());
     }
