@@ -1044,7 +1044,6 @@ GameObject:
   - component: {fileID: 23160750827767807}
   - component: {fileID: 7669584272649344253}
   - component: {fileID: 5812795562609814225}
-  - component: {fileID: 5844047235677853469}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1143,25 +1142,6 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 1}
   m_EffectDistance: {x: 0, y: 1}
   m_UseGraphicAlpha: 1
---- !u!95 &5844047235677853469
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3361423553584196957}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7bbfbaec15dae4d4a95418d2828c1134, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3397941131013781878
 GameObject:
   m_ObjectHideFlags: 0
