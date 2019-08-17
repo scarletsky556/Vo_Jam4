@@ -21,6 +21,8 @@ public class ResultManager : MonoBehaviour
 
     int round;
 
+    public UnityEngine.UI.Text RoundText;
+
     public void DataReset()
     {
         for(int i=0;i<3;i++)
@@ -58,6 +60,8 @@ public class ResultManager : MonoBehaviour
         else
         {
             gameManager.AnswerReset();
+            round++;
+            RoundText.text = (round).ToString();
             NextTL.Play();
             yield return 0;
             while (NextTL.state == PlayState.Playing)
@@ -65,8 +69,7 @@ public class ResultManager : MonoBehaviour
 
                 yield return 0;
             }
-            round++;
-
+            
             gameManager.GameStart(round);
         }
         

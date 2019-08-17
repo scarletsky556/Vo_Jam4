@@ -18,15 +18,16 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
 
     public Image BoxImage;
 
-    public GameObject Correct;
-    public GameObject Miss;
+    public Animator animator;
 
-    public void AnswerSet(int id)
+    public Text CorrectText;
+
+    public void AnswerSet(int id,string Ctext)
     {
-        Correct.SetActive(false);
-        Miss.SetActive(false);
+        animator.SetTrigger("Return");
         ChoicePrefab.gameObject.SetActive(false);
         AnswerId = id;
+        CorrectText.text = Ctext;
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -66,8 +67,8 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     public void CoMiSet(bool IsCorrect)
     {
         if (IsCorrect)
-            Correct.SetActive(true);
+            animator.SetTrigger("Correct");
         else
-            Miss.SetActive(true);
+            animator.SetTrigger("Miss");
     }
 }

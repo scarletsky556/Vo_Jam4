@@ -7211,6 +7211,11 @@ PrefabInstance:
       propertyPath: RoundObj
       value: 
       objectReference: {fileID: 7772292679166703607}
+    - target: {fileID: 408209897306732172, guid: 7cd81ade604aee94b9f71fb09f143917,
+        type: 3}
+      propertyPath: RoundText
+      value: 
+      objectReference: {fileID: 7772292679166703606}
     - target: {fileID: 1875526750688498906, guid: 7cd81ade604aee94b9f71fb09f143917,
         type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
