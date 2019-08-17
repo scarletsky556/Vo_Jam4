@@ -2685,7 +2685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5724317131043376699
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3867,11 +3867,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimRoot5
       objectReference: {fileID: 0}
-    - target: {fileID: 1202645479846717374, guid: 821a5ae40a98de547a710d56a9fcf30b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821a5ae40a98de547a710d56a9fcf30b, type: 3}
 --- !u!1 &655658656897561293 stripped
@@ -4024,11 +4019,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnimRoot2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202645479846717374, guid: 821a5ae40a98de547a710d56a9fcf30b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821a5ae40a98de547a710d56a9fcf30b, type: 3}
@@ -4183,11 +4173,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimRoot4
       objectReference: {fileID: 0}
-    - target: {fileID: 1202645479846717374, guid: 821a5ae40a98de547a710d56a9fcf30b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821a5ae40a98de547a710d56a9fcf30b, type: 3}
 --- !u!1 &4584389838428516487 stripped
@@ -4340,11 +4325,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AnimRoot3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202645479846717374, guid: 821a5ae40a98de547a710d56a9fcf30b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821a5ae40a98de547a710d56a9fcf30b, type: 3}
@@ -4502,11 +4482,6 @@ PrefabInstance:
     - target: {fileID: 700874281442352099, guid: 821a5ae40a98de547a710d56a9fcf30b,
         type: 3}
       propertyPath: m_FontData.m_RichText
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202645479846717374, guid: 821a5ae40a98de547a710d56a9fcf30b,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 140568738953554340, guid: 821a5ae40a98de547a710d56a9fcf30b,
