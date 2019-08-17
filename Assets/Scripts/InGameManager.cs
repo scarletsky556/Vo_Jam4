@@ -115,7 +115,7 @@ public class InGameManager : MonoBehaviour
             Debug.Log("Wrong Answer:" + quiz[i].systemName);
         }
 
-        if(round==0)
+        if(round==1)
         {
             introTL.Play();
 

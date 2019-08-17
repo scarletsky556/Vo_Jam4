@@ -38,7 +38,7 @@ public class GameSceneManager : MonoBehaviour
     {
         selected.gameObject.SetActive(false);
         inGame.gameObject.SetActive(true);
-        inGame.GameStart(0);
+        inGame.GameStart(1);
         result.DataReset();
     }
 
