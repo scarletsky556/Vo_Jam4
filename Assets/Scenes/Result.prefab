@@ -132,7 +132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &140916609928590881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -238,4 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ResultTL: {fileID: 1875526750688498906}
+  finalResult: {fileID: 0}
+  gameManager: {fileID: 0}
+  NextTL: {fileID: 5839677389225746787}
   sceneManager: {fileID: 0}
+  RoundObj: {fileID: 0}

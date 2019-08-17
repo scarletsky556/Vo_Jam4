@@ -2423,10 +2423,10 @@ MonoBehaviour:
   - {fileID: 4178345418469204776}
   - {fileID: 3603739508855962499}
   AnswerBox:
+  - {fileID: 7147222624328497483}
   - {fileID: 6209327065162286445}
   - {fileID: 9028340565482595777}
   - {fileID: 826465763450548493}
-  - {fileID: 7147222624328497483}
   quizManager: {fileID: 1200721427}
   character:
   - {fileID: 0}
@@ -2440,6 +2440,8 @@ MonoBehaviour:
   - {fileID: 225296223}
   QFukidashi: {fileID: 8829160124118179699}
   FinalResult: {fileID: 0}
+  Round: {fileID: 0}
+  RoundText: {fileID: 0}
 --- !u!1 &6068564860349706912
 GameObject:
   m_ObjectHideFlags: 0

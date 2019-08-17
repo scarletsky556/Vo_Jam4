@@ -70,13 +70,20 @@ public class InGameManager : MonoBehaviour
         
     }
 
+    public GameObject Round;
+    public UnityEngine.UI.Text RoundText;
+
     public void GameStart(int round)
     {
+        
         StartCoroutine(GameStartCo(round));
     }
 
     IEnumerator GameStartCo(int round)
     {
+        Round.SetActive(true);
+        NowRound = round;
+        RoundText.text = round.ToString();
         //初期化
         AnswerButton.gameObject.SetActive(false);
         for (int i = 0; i < AnswerBox.Length; i++)
@@ -108,17 +115,20 @@ public class InGameManager : MonoBehaviour
             Debug.Log("Wrong Answer:" + quiz[i].systemName);
         }
 
-
-        introTL.Play();
-        
-        yield return 0;
-
-        //イントロ再生
-        while(introTL.state==PlayState.Playing)
+        if(round==0)
         {
-            
+            introTL.Play();
+
             yield return 0;
+
+            //イントロ再生
+            while (introTL.state == PlayState.Playing)
+            {
+
+                yield return 0;
+            }
         }
+        
         
         //音声再生
         float maxClip=0;
@@ -166,6 +176,8 @@ public class InGameManager : MonoBehaviour
         AnswerButton.gameObject.SetActive(true);
     }
 
+    int NowRound=0;
+
     public void Answer()
     {
         for (int i = 0; i < QuizText.Length; i++)
@@ -191,8 +203,16 @@ public class InGameManager : MonoBehaviour
         AnswerTL.Stop();
         AnswerTL.time = 0;
         sceneManager.ToResult();
-        result.ResulStart();
-        FinalResult.DataSet(c, w);
+        result.ResulStart(c,NowRound);
+        //FinalResult.DataSet(c, w);
+    }
+
+    public void AnswerReset()
+    {
+        for (int i = 0; i < AnswerBox.Length; i++)
+        {
+            AnswerBox[i].gameObject.SetActive(false);
+        }
     }
     
 }

@@ -7,7 +7,7 @@ public class FinalResultManager : MonoBehaviour
     public UnityEngine.UI.Text Score;
     public UnityEngine.UI.Text Num;
     string plusText;
-    public void DataSet(int c,int w)
+    public void DataSet(int c)
     {
         Num.text = c.ToString();
         Score.text = (c * 10).ToString();

@@ -39,6 +39,7 @@ public class GameSceneManager : MonoBehaviour
         selected.gameObject.SetActive(false);
         inGame.gameObject.SetActive(true);
         inGame.GameStart(0);
+        result.DataReset();
     }
 
     public void ToResult()
