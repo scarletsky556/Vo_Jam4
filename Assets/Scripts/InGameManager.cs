@@ -166,6 +166,11 @@ public class InGameManager : MonoBehaviour
 
     }
 
+    public void IntroSkip()
+    {
+        introTL.time = 23.6f;
+    }
+
     public void AnswerCheck()
     {
         for(int i=0;i<AnswerBox.Length;i++)
