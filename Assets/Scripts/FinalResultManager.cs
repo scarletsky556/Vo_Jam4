@@ -13,11 +13,11 @@ public class FinalResultManager : MonoBehaviour
     {
         int sum = 0;
         Q1.text = c[0].ToString();
-        sum = c[0];
+        sum += c[0];
         Q2.text = c[1].ToString();
-        sum = c[1];
+        sum += c[1];
         Q3.text = c[2].ToString();
-        sum = c[2];
+        sum += c[2];
 
         FullScore.text = (sum * 10).ToString();
 

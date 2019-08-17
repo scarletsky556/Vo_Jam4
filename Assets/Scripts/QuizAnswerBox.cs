@@ -22,9 +22,15 @@ public class QuizAnswerBox : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
 
     public Text CorrectText;
 
-    public void AnswerSet(int id,string Ctext)
+    public void AnimatorReset()
     {
         animator.SetTrigger("Return");
+    }
+
+    public void AnswerSet(int id,string Ctext)
+    {
+        
+        NowAnswer = "";
         ChoicePrefab.gameObject.SetActive(false);
         AnswerId = id;
         CorrectText.text = Ctext;

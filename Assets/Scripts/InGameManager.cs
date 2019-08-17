@@ -95,7 +95,6 @@ public class InGameManager : MonoBehaviour
             QuizText[i].gameObject.SetActive(false);
         }
         QFukidashi.SetActive(false);
-        yield return 0;
 
         var quiz = quizManager.QuizCreate(difficult[0].AnswerNum, difficult[0].WrongNum);
         var pos = difficult[0].AnswerPos.OrderBy(i => System.Guid.NewGuid()).ToList();
@@ -213,6 +212,13 @@ public class InGameManager : MonoBehaviour
     }
 
     public void AnswerReset()
+    {
+        for (int i = 0; i < AnswerBox.Length; i++)
+        {
+            AnswerBox[i].AnimatorReset();
+        }
+    }
+    public void AnswerAnActive()
     {
         for (int i = 0; i < AnswerBox.Length; i++)
         {

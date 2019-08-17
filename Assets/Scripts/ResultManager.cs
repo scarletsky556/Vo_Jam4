@@ -60,6 +60,8 @@ public class ResultManager : MonoBehaviour
         else
         {
             gameManager.AnswerReset();
+            yield return new WaitForSeconds(0.1f);
+            gameManager.AnswerAnActive();
             round++;
             RoundText.text = (round).ToString();
             NextTL.Play();
