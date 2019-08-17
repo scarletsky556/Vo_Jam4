@@ -491,7 +491,18 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1470694762235651428}
+        m_MethodName: BGMSliderChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &510537390111700871
@@ -506,6 +517,7 @@ GameObject:
   - component: {fileID: 510537390111700864}
   - component: {fileID: 510537390111700865}
   - component: {fileID: 510537390111700870}
+  - component: {fileID: 1470694762235651428}
   m_Layer: 5
   m_Name: VolumeCanvas
   m_TagString: Untagged
@@ -593,6 +605,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1470694762235651428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510537390111700871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0366f5912e6ebcb45873e7e3aca24ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Master: {fileID: 24100000, guid: 80c969b61efcc0d4eae71feed5bb56bf, type: 2}
+  MasterSlider: {fileID: 510537391390855021}
+  BGMSlider: {fileID: 510537390004869132}
 --- !u!1 &510537390219879534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1381,18 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1470694762235651428}
+        m_MethodName: MaterSliderChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &510537391556696924
