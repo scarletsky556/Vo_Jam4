@@ -53,6 +53,9 @@ public class ResultManager : MonoBehaviour
         }
         if (round >= 3)
         {
+            gameManager.AnswerReset();
+            yield return new WaitForSeconds(0.1f);
+            gameManager.AnswerAnActive();
             RoundObj.SetActive(false);
             finalResult.DataSet(correct);
             sceneManager.ToFinalResult();
