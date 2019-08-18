@@ -243,3 +243,4 @@ MonoBehaviour:
   NextTL: {fileID: 5839677389225746787}
   sceneManager: {fileID: 0}
   RoundObj: {fileID: 0}
+  RoundText: {fileID: 0}
