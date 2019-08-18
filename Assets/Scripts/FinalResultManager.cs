@@ -39,18 +39,20 @@ public class FinalResultManager : MonoBehaviour
         }
     }
     
-    //[SerializeField] string linkUrl = "http://negi-lab.blog.jp/";   // ツイートに挿入するURL
+    [SerializeField] string linkUrl = "https://sorairosky.itch.io/voirosyotoku";   // ツイートに挿入するURL
     [SerializeField] string hashtags = "ボイロ聖徳太子";        // ツイートに挿入するハッシュタグ
 
     public void ResultTweet()
     {
             var url = "https://twitter.com/intent/tweet?"
                 + "text=" + "ボイロ聖徳太子で"+ FullScore.text+"点を取りました！"+plusText
-                //+ "&url=" + linkUrl
+                + "&url=" + linkUrl
                 + "&hashtags=" + hashtags;
 
 #if UNITY_EDITOR
             Application.OpenURL(url);
+#elif UNITY_WEBGL
+        Application.ExternalEval(string.Format("window.open('{0}','_blank')", url));
 #else
             Application.OpenURL(url);
 #endif
